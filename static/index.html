@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>صوتي | تحويل النص إلى كلام</title><meta name="description" content="اكتب نصك، اختر صوتك واستمع إلى النتيجة ونزلها بصيغة MP3."><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/">صوتي<span class="wave" aria-hidden="true">▂▅▇▃▆</span></a><span class="tag">من كلماتك… إلى صوت</span></header>
+<main>
+<div class="intro"><span class="eyebrow">مساحتك للإبداع الصوتي</span><h1>امنح كلماتك <em>صوتًا.</em></h1><p>اكتب نصك، اختر الصوت المناسب، وحمّل النتيجة بصيغة MP3.</p></div>
+<form id="studio">
+<div class="editor"><div class="section-title"><label for="text">النص الذي تريد سماعه</label><button type="button" id="example" class="quiet">جرّب نصًا</button></div>
+<textarea id="text" required maxlength="5000" placeholder="اكتب أو الصق نصك هنا…" aria-describedby="count" dir="auto"></textarea>
+<div class="editor-bottom"><span id="count">0 / 5000 حرف</span><button type="button" id="clear" class="quiet">مسح النص</button></div></div>
+<aside><h2>إعدادات الصوت</h2><label for="voice">الصوت</label><select id="voice" required disabled><option value="">جاري تحميل الأصوات…</option></select><label for="rate">سرعة القراءة <output id="speed" for="rate">عادية</output></label><input id="rate" type="range" min="-50" max="50" value="0" step="5"><div class="range-labels"><span>أبطأ</span><span>أسرع</span></div><button id="generate" type="submit" disabled>تحويل إلى صوت <span aria-hidden="true">←</span></button><p class="note">النص يُرسل إلى خدمة Microsoft الصوتية لتوليد الملف. تجنب إدخال معلومات حساسة.</p></aside>
+</form>
+<p id="status" role="status" aria-live="polite">جارٍ تجهيز قائمة الأصوات…</p>
+<section id="result" hidden><div><span class="eyebrow">ملفك جاهز</span><h2>استمع إلى كلماتك</h2></div><audio id="player" controls></audio><a id="download" class="download" download="sawti.mp3">تنزيل MP3 ↓</a></section>
+<footer>صوتي · تحويل النص إلى كلام <span>حتى 5000 حرف في المرة الواحدة</span></footer>
+</main></body></html>
